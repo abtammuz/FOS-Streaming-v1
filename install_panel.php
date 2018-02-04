@@ -36,7 +36,7 @@ else {
 }
 echo "2. [Arch Detection:]         ";
 echo " [############";
-if(trim($arch) == "x86_64") {
+if(trim($arch) == "aarch64") {
     echo "]PASS \n";
     echo "3. [Installing needed files:]";
     echo " [#";
