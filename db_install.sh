@@ -28,7 +28,7 @@ sed -i 's/zzz/'$sqlpasswd'/g' /home/fos-streaming/fos/www/config.php
 sed -i 's/ttt/'$sqluname'/g' /home/fos-streaming/fos/www/config.php
 
 cd /usr/src/
-wget https://getcomposer.org/installer 
+wget https://dl.dropboxusercontent.com/s/yf7dqv1gkqluzz3/installer
 php installer 
 cd /home/fos-streaming/fos/www/  
 php /usr/src/composer.phar install  
