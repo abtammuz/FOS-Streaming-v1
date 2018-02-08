@@ -173,14 +173,14 @@ if(trim($arch) == "x86_64") {
     }
     shell_exec("/usr/sbin/useradd -s /sbin/nologin -U -d /home/fos-streaming -m fosstreaming > /dev/null");
     echo "##";
-    shell_exec("wget https://www.dropbox.com/s/8lztf350ekzdl8c/fos-streaming_unpack_x84_64.tar.gz -O /home/fos-streaming/fos-streaming_unpack_x84_64.tar.gz  > /dev/null 2>&1");
+    shell_exec("wget https://dl.dropboxusercontent.com/s/8lztf350ekzdl8c/fos-streaming_unpack_x84_64.tar.gz -O /home/fos-streaming/fos-streaming_unpack_x84_64.tar.gz  > /dev/null 2>&1");
     shell_exec("tar -xzf /home/fos-streaming/fos-streaming_unpack_x84_64.tar.gz -C /home/fos-streaming/ > /dev/null 2>&1");
     shell_exec("/bin/rm -r /home/fos-streaming/fos-streaming_unpack_x84_64.tar.gz  > /dev/null 2>&1");
     shell_exec("/bin/mkdir /usr/src/FOS-Streaming > /dev/null 2>&1");
     echo "##";
     shell_exec("git clone https://github.com/abtammuz/FOS-Streaming-v1.git /usr/src/FOS-Streaming/ > /dev/null 2>&1");
     shell_exec("/bin/mv /usr/src/FOS-Streaming/* /home/fos-streaming/fos/www/ > /dev/null 2>&1");
-    #shell_exec("wget https://www.dropbox.com/s/yf7dqv1gkqluzz3/installer -O /usr/src/installer  > /dev/null 2>&1");
+    #shell_exec("wget https://dl.dropboxusercontent.com/s/yf7dqv1gkqluzz3/installer -O /usr/src/installer  > /dev/null 2>&1");
     #shell_exec("/usr/bin/php /usr/src/installer > /dev/null 2>&1");
     #shell_exec("/bin/cp /usr/src/composer.phar /usr/bin/composer.phar > /dev/null 2>&1");
     #shell_exec("/usr/bin/composer.phar install  -d  /home/fos-streaming/fos/www/ > /dev/null 2>&1");
@@ -203,7 +203,7 @@ if(trim($arch) == "x86_64") {
     shell_exec("/home/fos-streaming/fos/php/sbin/php-fpm");
     shell_exec("/home/fos-streaming/fos/nginx/sbin/nginx_fos");
     echo "#";
-    shell_exec("wget https://www.dropbox.com/s/nkytdok1pavdrki/ffmpeg-release-64bit-static.tar.xz -O /home/fos-streaming/ffmpeg-release-64bit-static.tar.xz  > /dev/null 2>&1");
+    shell_exec("wget https://dl.dropboxusercontent.com/s/nkytdok1pavdrki/ffmpeg-release-64bit-static.tar.xz -O /home/fos-streaming/ffmpeg-release-64bit-static.tar.xz  > /dev/null 2>&1");
     shell_exec("/bin/mkdir /usr/src/ffmpeg > /dev/null 2>&1");
     shell_exec("tar -xJf /home/fos-streaming/ffmpeg-release-64bit-static.tar.xz -C /usr/src/ffmpeg > /dev/null 2>&1");
     shell_exec("/bin/cp /usr/src/ffmpeg/ffmpeg*/ffmpeg  /usr/local/bin/ffmpeg");
